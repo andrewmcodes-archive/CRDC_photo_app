@@ -1,48 +1,68 @@
 <% if current_user %>
-  <h3>Welcome: <%= current_user.email %></h3>
-<% else %>
-  <div class="jumbotron">
-    <h2>Welcome to the Photo Management App!</h2>
-    <p class="lead">
-      You'll love managing your Photos with our application. Sign up!
-    </p>
+  <div class="row user-root">
+    <div class="col-md-6 col-md-offset-3 white text-center">
+      <h1>Welcome</h1>
+      <h2><%= current_user.email %></h2>
+      <br>
+      <h3>Access your images</h3>
+      <%= link_to 'Images', new_image_path, class: 'btn btn-success btn-lg'%>
+    </div>
   </div>
-
-  <div class="row">
-    <div class="plans clearfix">
-      <div class="col-lg-3 col-lg-offset-3 plan">
-        <h2>Premium Plan</h2>
-        <div class="price pull-right">
-          Price: $10
-        </div>
-        <div class="features">
-          <ul>
-            <li>Unlimited Image Uploads</li>
-            <li>Responsive design</li>
-            <li>Access anywhere</li>
-          </ul>
-        </div>
-        <p>
-          <%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-primary sign-up' %>
-        </p>
+<% else %>
+  <div class="carousel slide carousel-fade" data-ride="carousel">
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
       </div>
-      <div class="col-lg-3 plan">
-        <h2>Amaze Plan</h2>
-        <div class="price pull-right">
-          Price: $20
-        </div>
-        <div class="features">
-          <ul>
-            <li>Unlimited Image Uploads</li>
-            <li>Responsive design</li>
-            <li>Access anywhere</li>
-            <li class='extra'>Unlimited projects</li>
-          </ul>
-        </div>
-        <p>
-          <%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-primary sign-up' %>
-        </p>
+      <div class="item">
+      </div>
+      <div class="item">
       </div>
     </div>
   </div>
+  <div class="title">
+    <h1>Welcome!</h1>
+    <h2>Sign up to keep your digital memories safe in the cloud</h2>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Premium Plan</h3>
+          <p class="price">$10</p>
+        </div>
+        <div class="panel-body">
+          <ul>
+            <li>Unlimited Image Uploads</li>
+            <li>Responsive design</li>
+            <li>Access anywhere</li>
+          </ul>
+        </div>
+        <div class="panel-footer"><%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-primary sign-up' %></div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Amaze Plan</h3>
+          <p class="price">$20</p>
+        </div>
+        <div class="panel-body">
+          <ul>
+            <li>Unlimited Image Uploads</li>
+            <li>Responsive design</li>
+            <li>Access anywhere</li>
+            <li>Unlimited projects</li>
+          </ul>
+        </div>
+        <div class="panel-footer"><%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-primary sign-up' %></div>
+      </div>
+    </div>
+  </div>
+
+
+
+
 <% end %>

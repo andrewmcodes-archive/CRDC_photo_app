@@ -1,5 +1,9 @@
 <%- model_class = Image -%>
-<div class="page-header">
+<div class="panel">
+<div class="panel-heading ">
   <h1><%=t '.title', :default => [:'helpers.titles.new', 'New %{model}'], :model => model_class.model_name.human.titleize %></h1>
 </div>
+<div class="panel-body">
 <%= render :partial => 'form' %>
+</div>
+</div>

@@ -1,7 +1,9 @@
 <%- model_class = Image -%>
-<div class="page-header">
+<div class="panel">
+<div class="panel-heading">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
 </div>
+<div class="panel-body">
 <table class="table table-striped">
   <thead>
     <tr>
@@ -30,7 +32,10 @@
     <% end %>
   </tbody>
 </table>
-
+</div>
+<div class="panel-footer">
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_image_path,
             :class => 'btn btn-primary' %>
+</div>
+</div>
