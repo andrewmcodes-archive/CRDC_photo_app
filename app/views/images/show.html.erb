@@ -7,7 +7,7 @@
 <h4><%= model_class.human_attribute_name(:name) %>:
   <%= @image.name %></h4>
   <br>
-  <%= image_tag @image.picture.url, size: "250x250" if @image.picture? %>
+  <%= image_tag @image.picture.url, class: "img-responsive" if @image.picture? %>
 
 
 </div>

@@ -1,11 +1,11 @@
 <% if current_user %>
   <div class="row user-root">
-    <div class="col-md-6 col-md-offset-3 white text-center">
+    <div class="col-lg-12 white text-center">
       <h1>Welcome</h1>
-      <h2><%= current_user.email %></h2>
+      <h3><%= current_user.email %></h3>
       <br>
-      <h3>Access your images</h3>
-      <%= link_to 'Images', new_image_path, class: 'btn btn-success btn-lg'%>
+      <h4>Save your images before its too late</h4>
+      <%= link_to 'Upload', new_image_path, class: 'btn btn-success btn-lg'%>
     </div>
   </div>
 <% else %>
