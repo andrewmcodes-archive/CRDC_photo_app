@@ -30,6 +30,7 @@
           <ul class="nav navbar-nav navbar-right">
             <% if current_user %>
               <li><%= link_to('Images', images_path, class: '', title: 'Images')%></li>
+              <li><%= link_to('Upload', new_image_path, class: '', title: 'Upload')%></li>
               <li class="">
                 <%= link_to ('<i class="fa fa-user"></i> ' + truncate(current_user.email, length: 25)).html_safe,
                             edit_user_registration_path, title: 'Edit Profile' %>

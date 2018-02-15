@@ -16,10 +16,15 @@ class Image < ApplicationRecord
   mount_uploader :picture, PictureUploader
 
   validate :picture_size
+  validate :picture_empty
 
   private
 
   def picture_size
     errors.add(:picture, 'should be less than 5MB') if picture.size > 5.megabytes
+  end
+
+  def picture_empty
+    errors.add(:picture, 'must be uploaded') if picture.blank?
   end
 end
