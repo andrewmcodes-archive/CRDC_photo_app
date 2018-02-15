@@ -10,7 +10,6 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
-
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -23,7 +22,9 @@ gem 'therubyracer', platforms: :ruby
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
+gem 'bootstrap', '~> 4.0.0'
 gem 'devise'
+# gem 'devise-bootstrapped', github: 'king601/devise-bootstrapped', branch: 'bootstrap4'
 gem 'devise-bootstrap-views'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
@@ -34,6 +35,8 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog'
 gem 'font-awesome-rails'
+gem 'oink'
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
@@ -45,6 +48,10 @@ group :development, :test do
 end
 
 group :development do
+  # Adds a comment summarizing the current schema to the top or bottom of specified files
+  gem 'annotate'
+  # notify you when you should add eager loading (N+1 queries)
+  gem 'bullet'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'web-console', '>= 3.3.0'
